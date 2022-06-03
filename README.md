@@ -1,2 +1,2 @@
-# Screening-Test-Usman-Idzhami-
+# Screening-Test-Usman-Idzhami
 Create app for test
