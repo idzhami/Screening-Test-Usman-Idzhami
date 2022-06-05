@@ -3,7 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_screen_one.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/drawable/bg_rectangle_orange.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/ic_bg_edit_text.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/ic_image.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/round_corner.xml" value="0.2475" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_screen_four.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_screen_one.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_screen_three.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_screen_two.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_dialog_event.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_dialog_status_palindrome.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_list_events.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_map_view.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/item_list_screen_three.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/row_item_screen_four.xml" value="0.35625" />
       </map>
     </option>
   </component>

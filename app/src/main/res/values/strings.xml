@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Screening-Test</string>
+    <string name="label_welcome">Welcome</string>
+    <string name="label_welcome_info">This is app for suitmedia mobile developer test</string>
+    <string name="label_copy_right">Copyright © 2020 Suitmedia All Rights Reserved.</string>
+    <string name="label_input_name">Type name here...</string>
+    <string name="label_input_palindrome">Type text palindrome</string>
+    <string name="label_next">Next</string>
+    <string name="label_check">Check</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_hallo">Hallo,</string>
+    <string name="label_usman_idzhami">Usman Idzhami</string>
+    <string name="label_choose_event">Choose Event</string>
+    <string name="label_choose_guest">Choose Guest</string>
+    <string name="label_event">Event</string>
+    <string name="label_close_label">Press the back button again to close the app</string>
+    <string name="label_update">Look out for updates soon !</string>
+    <string name="label_input_lat">Input latitude -6.8902647F</string>
+    <string name="label_input_long">Input longitude 107.6146987F</string>
+    <string name="label_save">save</string>
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.dialog.DialogEventFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/medium_margin_twenty_four">
+        <EditText
+            android:id="@+id/ED_LATITUDE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_input_lat"
+            android:paddingStart="@dimen/little_small_margin_nine"
+            android:background="@drawable/ic_bg_edit_text"/>
+        <EditText
+            android:id="@+id/ED_LONGITUDE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_input_long"
+            android:paddingStart="@dimen/little_small_margin_nine"
+            android:layout_marginTop="@dimen/medium_margin_16"
+            android:background="@drawable/ic_bg_edit_text"/>
+        <Button
+            android:id="@+id/BTN_SAVE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin_16"
+            android:background="@drawable/bg_rectangle_orange"
+            android:textColor="@color/white"
+            android:text="@string/label_save"/>
+    </LinearLayout>
+
+</LinearLayout>

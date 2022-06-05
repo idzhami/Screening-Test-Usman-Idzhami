@@ -3,6 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="id.idzhami.screening_test">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,8 +22,21 @@
         android:theme="@style/Theme.ScreeningTest"
         tools:targetApi="31">
         <activity
-            android:name=".ScreenOneActivity"
-            android:exported="false" />
+            android:name=".ui.screenFour.ScreenFourActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.screenThree.ScreenThreeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.screenTwo.ScreenTwoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.screenOne.ScreenOneActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,6 +46,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCff1q9KlLSJFRqUPRJgUyUdz1Tv-DK7iY" />
     </application>
 
 </manifest>

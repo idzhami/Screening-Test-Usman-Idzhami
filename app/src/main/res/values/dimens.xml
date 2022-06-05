@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="little_big_margin_forty_eight">48dp</dimen>
+    <dimen name="little_small_margin_nine">9dp</dimen>
+    <dimen name="medium_margin_twenty_four">24dp</dimen>
+    <dimen name="small_margin_12">12dp</dimen>
+    <dimen name="medium_size_thirty_two">32dp</dimen>
+    <dimen name="medium_margin_eighteen">18dp</dimen>
+    <dimen name="medium_margin_fifteen">15dp</dimen>
+    <dimen name="medium_margin_71">71dp</dimen>
+    <dimen name="big_margin_190">190dp</dimen>
+    <dimen name="medium_margin_64">64dp</dimen>
+    <dimen name="medium_margin_16">16dp</dimen>
+</resources>

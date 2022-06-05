@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screenTwo.ScreenTwoActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:background="@drawable/bg_bright">
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/little_big_margin_forty_eight"
+            android:gravity="left"
+            android:layout_marginStart="@dimen/medium_size_thirty_two"
+            android:text="@string/label_hallo"
+            android:textColor="@color/primary_dark_gray"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/TXT_NAME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_welcome"
+            android:layout_marginStart="@dimen/medium_size_thirty_two"
+            android:layout_marginTop="@dimen/little_small_margin_nine"
+            android:layout_marginEnd="@dimen/small_margin_12"
+            android:gravity="left"
+            android:text="@string/label_usman_idzhami"
+            android:textColor="@color/primary_orange"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/medium_margin_71"
+            android:background="@drawable/ic_line_orange" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin_190"
+        android:layout_marginStart="@dimen/medium_size_thirty_two"
+        android:layout_marginEnd="@dimen/medium_size_thirty_two"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/BTN_CHOOSE_EVENT"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_rectangle_orange"
+            android:textColor="@color/white"
+            android:text="@string/label_choose_event"/>
+        <Button
+            android:id="@+id/BTN_CHOOSE_GUEST"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/medium_margin_twenty_four"
+            android:background="@drawable/bg_rectangle_orange"
+            android:textColor="@color/white"
+            android:text="@string/label_choose_guest"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin_64"
+            android:layout_gravity="center"
+            android:background="@drawable/img_suitmedia"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/img_bg_bottom" />
+</RelativeLayout>
