@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import id.idzhami.screening_test.data.networks.RemoteDataSource
 import id.idzhami.screening_test.data.repository.BaseRepository
+import id.idzhami.screening_test.ui.loading.ViewLoadingDialog
 import id.idzhami.screening_test.utils.Key
 import id.idzhami.screening_test.utils.UserPreferences
 import kotlinx.coroutines.flow.first
@@ -22,6 +23,7 @@ abstract class BaseActivity<VM : ViewModel, R: BaseRepository> : AppCompatActivi
     protected lateinit var viewModel:VM
     protected val remoteDataSource = RemoteDataSource()
     protected lateinit var userPreferences: UserPreferences
+    public val progressDialog = ViewLoadingDialog()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

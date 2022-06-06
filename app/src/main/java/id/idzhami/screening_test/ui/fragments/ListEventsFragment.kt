@@ -23,6 +23,11 @@ class ListEventsFragment : BaseFragment<FragmentListEventsBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getDataListDummy()
+        binding.swipeRefreshLayout?.setOnRefreshListener {
+            binding.swipeRefreshLayout!!.isRefreshing = false
+            getDataListDummy()
+            binding.rvMain.startLayoutAnimation()
+        }
     }
 
     private fun getDataListDummy() {

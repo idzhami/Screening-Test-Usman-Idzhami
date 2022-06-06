@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import id.idzhami.screening_test.ui.screenOne.ScreenOneActivity
 import id.idzhami.screening_test.ui.screenThree.ScreenThreeActivity
+import id.idzhami.screening_test.utils.startNewActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,8 +15,7 @@ class MainActivity : AppCompatActivity() {
         try {
 
             Handler().postDelayed({
-                val intent = Intent(this@MainActivity, ScreenOneActivity::class.java)
-                startActivity(intent)
+                this@MainActivity.startNewActivity(ScreenOneActivity::class.java)
             }, 2000)
         }catch (e : Exception){
 

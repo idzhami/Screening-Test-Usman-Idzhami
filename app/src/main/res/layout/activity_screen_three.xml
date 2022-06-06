@@ -13,15 +13,15 @@
         android:layout_height="wrap_content"
         android:background="@color/primary_orange"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ToolbarColoredBackArrowBlack">
+        android:theme="@style/ToolbarColoredBackArrow">
         <ImageView
             android:id="@+id/BTN_LISTS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
             android:layout_gravity="end"
             android:visibility="gone"
             android:layout_marginEnd="@dimen/medium_margin_16"
-            android:background="@android:drawable/ic_lock_idle_alarm" />
+            android:background="@drawable/ic_list_view" />
         <ImageView
             android:id="@+id/BTN_MAP"
             android:layout_width="wrap_content"

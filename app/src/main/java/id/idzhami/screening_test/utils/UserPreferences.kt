@@ -23,32 +23,47 @@ class UserPreferences(
         )
     }
 
-    suspend fun saveFirstLogin(value: String) {
+    suspend fun saveImage(imageEncoded: String) {
         dataStore.edit { preferences ->
-            preferences[KEY_FIRST] = value
+            preferences[KEY_IMAGE] = imageEncoded
         }
     }
 
-    fun getFirstLogin(): String? {
-        return runBlocking { IdFirstLogin.first() }
+    fun getImage(): String? {
+        return runBlocking { image.first() }
     }
 
-    val IdFirstLogin: Flow<String?>
+    val image : Flow<String?>
         get() = dataStore.data.map { preferences ->
-            preferences[KEY_FIRST]
+            preferences[KEY_IMAGE]
         }
 
+    suspend fun saveName(Name: String) {
+        dataStore.edit { preferences ->
+            preferences[KEY_NAME] = Name
+        }
+    }
+
+    fun getName(): String? {
+        return runBlocking { name.first() }
+    }
+
+    val name : Flow<String?>
+        get() = dataStore.data.map { preferences ->
+            preferences[KEY_NAME]
+        }
 
     suspend fun clear() {
         dataStore.edit { preferences ->
             run {
-                preferences.remove(KEY_FIRST)
+                preferences.remove(KEY_IMAGE)
             }
 
         }
     }
 
     companion object {
-        private val KEY_FIRST = preferencesKey<String>(name = "key_first")
+        private val KEY_IMAGE = preferencesKey<String>(name = "key_image")
+        private val KEY_NAME = preferencesKey<String>(name = "key_name")
     }
 }

@@ -19,4 +19,5 @@
     <string name="label_input_lat">Input latitude -6.8902647F</string>
     <string name="label_input_long">Input longitude 107.6146987F</string>
     <string name="label_save">save</string>
+    <string name="label_guest">Guests</string>
 </resources>

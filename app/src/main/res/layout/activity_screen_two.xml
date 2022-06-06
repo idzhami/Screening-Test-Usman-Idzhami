@@ -36,6 +36,7 @@
             android:textColor="@color/primary_orange"
             android:textSize="18sp" />
         <ImageView
+            android:id="@+id/img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

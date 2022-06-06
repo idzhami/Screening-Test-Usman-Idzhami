@@ -12,6 +12,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
+import android.util.Base64
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -27,14 +28,16 @@ import id.idzhami.screening_test.databinding.ActivityScreenOneBinding
 import id.idzhami.screening_test.ui.base.BaseActivity
 import id.idzhami.screening_test.ui.dialog.DialogStatusPalindromeFragment
 import id.idzhami.screening_test.ui.screenTwo.ScreenTwoActivity
+import kotlinx.coroutines.runBlocking
 import java.io.ByteArrayOutputStream
 
 class ScreenOneActivity : BaseActivity<UserViewModel, UserRepository>() {
     val MY_CAMERA_PERMISSION_CODE = 100
     val REQUEST_IMAGE_CAPTURE = 1
     private lateinit var binding: ActivityScreenOneBinding
-    var byteArray : ByteArray? = null
+    var encodeString = ""
     var dbhelper = DbAdapter(this).TablePersons()
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +78,7 @@ class ScreenOneActivity : BaseActivity<UserViewModel, UserRepository>() {
         binding.ADDIMAGE.setOnClickListener {
             selectImage()
         }
-        binding.BTNCHECK.setOnClickListener{
+        binding.BTNCHECK.setOnClickListener {
             val ed_palindrome = binding.EDPALINDROME.text.toString().trim()
             if (CheckPalindrome(ed_palindrome)) {
                 println("$ed_palindrome is a Palindrome")
@@ -103,9 +106,10 @@ class ScreenOneActivity : BaseActivity<UserViewModel, UserRepository>() {
         }
         binding.BTNNEXT.setOnClickListener {
             val ed_name = binding.EDPALINDROME.text.toString().trim()
-            var addperson = dbhelper.add(ed_name,byteArray!!)
+            runBlocking { userPreferences.saveImage(encodeString) }
+            runBlocking { userPreferences.saveName(ed_name) }
+            
             val intent = Intent(this@ScreenOneActivity, ScreenTwoActivity::class.java)
-            intent.putExtra("id", addperson)
             startActivity(intent)
 
         }
@@ -187,6 +191,7 @@ class ScreenOneActivity : BaseActivity<UserViewModel, UserRepository>() {
                     imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
                     val byteArray = stream.toByteArray()
                     binding.ADDIMAGE.setImageBitmap(imageBitmap)
+                    encodeTobase64(imageBitmap)
                 }
             } else if (requestCode == 2) {
                 val selectedImage = data?.data
@@ -206,20 +211,21 @@ class ScreenOneActivity : BaseActivity<UserViewModel, UserRepository>() {
                     "path of image from gallery : ",
                     picturePath + ""
                 )
-                Log.d("image : " , image.toString())
-                val stream = ByteArrayOutputStream()
-                image.compress(Bitmap.CompressFormat.PNG, 100, stream)
-                 byteArray = stream.toByteArray()
+                Log.d("image : ", image.toString())
+                encodeTobase64(image)
                 binding.ADDIMAGE.setImageBitmap(image)
             }
         }
     }
-    private fun ADD_PERSON(
-        name: String,
-        image: ByteArray,
-    ) {
-        var addperson = dbhelper.add(name,image)
 
+    fun encodeTobase64(image: Bitmap): String? {
+        val baos = ByteArrayOutputStream()
+        image.compress(Bitmap.CompressFormat.PNG, 100, baos)
+        val b = baos.toByteArray()
+        val imageEncoded: String = Base64.encodeToString(b, Base64.DEFAULT)
+        Log.d("Image Log:", imageEncoded)
+        encodeString = imageEncoded
+        return imageEncoded
     }
 
     private var doubleBackToExitPressedOnce = false

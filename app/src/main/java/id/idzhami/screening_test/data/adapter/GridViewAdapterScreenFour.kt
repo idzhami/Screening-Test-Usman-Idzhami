@@ -44,10 +44,11 @@ class GridViewAdapterScreenFour(
         imageView = convertView!!.findViewById(R.id.imageView)
         textView = convertView.findViewById(R.id.textView)
         val data = resultData.data
-//        for (i in data ){
             textView.text = data[position].first_name
             Picasso.get().load(data[position].avatar).into(imageView)
-//        }
         return convertView
     }
+
+
+
 }

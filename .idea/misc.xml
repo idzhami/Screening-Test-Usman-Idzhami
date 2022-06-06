@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/layout/fragment_list_events.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_map_view.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/item_list_screen_three.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_loading.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/row_item_screen_four.xml" value="0.35625" />
       </map>
     </option>
